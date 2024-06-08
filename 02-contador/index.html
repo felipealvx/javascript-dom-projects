@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador JavaScript - Dom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Contador</h1>
+    <div id="numbers">0</div>
+    <div class="buttons">
+      <button class="btn" id="increment">Adicionar</button>
+      <button class="btn" id="decrement">Remover</button>
+      <button class="btn" id="reset">Resetar</button>
+    </div>
+  </div>
+
+<!-- JAVASCRIPT CODE -->
+  <script>
+    const increment = document.getElementById('increment');
+    const decrement = document.getElementById('decrement');
+    const reset = document.getElementById('reset');
+    const numbers = document.getElementById('numbers')
+
+    count = 0;
+
+    function incrementFun(){
+      count++;
+      numbers.innerHTML = count;
+    }
+    function decrementFun(){
+      count--;
+      numbers.innerHTML = count;
+    }
+    function resetFun(){
+      count = 0;
+      numbers.innerHTML = count;
+    }
+
+    increment.addEventListener('click', incrementFun);
+    decrement.addEventListener('click', decrementFun);
+    reset.addEventListener('click', resetFun);
+
+  </script>
+</body>
+</html>
